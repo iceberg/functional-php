@@ -33,6 +33,7 @@ if (!extension_loaded('functional')) {
     require_once $basePath . 'Filter.php';
     require_once $basePath . 'Flatten.php';
     require_once $basePath . 'Group.php';
+	require_once $basePath . 'GroupByArray.php';
     require_once $basePath . 'Invoke.php';
     require_once $basePath . 'InvokeFirst.php';
     require_once $basePath . 'InvokeLast.php';

@@ -113,6 +113,18 @@ class InvalidArgumentException extends \InvalidArgumentException
             );
         }
     }
+	
+	public static function assertCollectionFromCallback($collection, $callee)
+    {	
+        if (!is_array($collection) and !$collection instanceof \Traversable) {
+            throw new static(
+                sprintf(
+                    '%s(): callback expects to return array or instance of Traversable',
+                    $callee
+                )
+            );
+        }
+    }
 
     public static function assertPositiveInteger($value, $callee, $parameterPosition)
     {
